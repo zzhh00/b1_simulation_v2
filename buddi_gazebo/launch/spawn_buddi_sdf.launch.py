@@ -12,7 +12,7 @@ def generate_launch_description():
 
     # Get path to URDF
     urdf_dir = get_package_share_directory('buddi_gazebo')
-    urdf_path = os.path.join(urdf_dir, 'models', 'buddi_devel.sdf')
+    urdf_path = os.path.join(urdf_dir, 'models', 'buddi_devel_v2.sdf')
     with open(urdf_path, 'r') as infp:
         urdf_file = infp.read()
         
