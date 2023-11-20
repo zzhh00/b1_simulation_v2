@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <sdf version='1.7'>
   <model name='buddi'>
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+      <pose relative_to='base_footprint'>0.0 0.0 0.010 0 0 0</pose>
+      <parent>base_footprint</parent>
+      <child>base_link</child>
+    </joint>
+
     <link name='base_link'>
       <inertial>
         <pose>0.005275 -0.007914 0.582065 0 -0 0</pose>
@@ -19,7 +27,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/base_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/base_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -28,7 +36,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_left_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_left_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -37,7 +45,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_right_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_right_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -46,7 +54,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_left_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_left_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -55,7 +63,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_right_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_right_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -64,7 +72,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/imu_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/imu_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -73,7 +81,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_back_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_back_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -82,7 +90,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_forward_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_forward_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -91,7 +99,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_down_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_down_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -100,7 +108,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_up_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_up_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -109,7 +117,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_down_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_down_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -118,7 +126,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_up_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_up_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -127,7 +135,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/base_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/base_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -136,7 +144,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_left_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_left_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -145,7 +153,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_right_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_back_right_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -154,7 +162,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_left_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_left_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -163,7 +171,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_right_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/caster_forward_right_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -172,7 +180,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/imu_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/imu_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -181,7 +189,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_back_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_back_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -190,7 +198,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_forward_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/lidar_forward_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -199,7 +207,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_down_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_down_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -208,7 +216,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_up_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_back_up_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -217,7 +225,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_down_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_down_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -226,151 +234,11 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_up_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/rgbd_forward_up_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
 
-      <sensor name="forward_down_rgbd" type="camera">
-        <pose>0.5132 0.016 0.048721 0 -0.6544 0</pose>
-        <always_on>true</always_on>
-        <visualize>true</visualize>
-        <update_rate>30</update_rate>
-        <camera name="forward_down_rgb">
-          <horizontal_fov>1.085595</horizontal_fov>
-          <image>
-              <width>640</width>
-              <height>480</height>
-              <format>R8G8B8</format>
-          </image>
-          <clip>
-              <near>0.03</near>
-              <far>100</far>
-          </clip>
-          <noise>
-            <type>gaussian</type>
-            <!-- Noise is sampled independently per pixel on each frame.
-                  That pixel's noise value is added to each of its color
-                  channels, which at that point lie in the range [0,1]. -->
-            <mean>0.0</mean>
-            <stddev>0.007</stddev>
-          </noise>
-        </camera>
-          <plugin name="forward_down_rgbd_driver" filename="libgazebo_ros_camera.so">
-            <ros>
-              <!-- <namespace>test_cam</namespace> -->
-              <!-- <remapping>image_raw:=image_demo</remapping> -->
-              <!-- <remapping>camera_info:=camera_info_demo</remapping> -->
-            </ros>
-            <!-- camera_name>omit so it defaults to sensor name</camera_name-->
-            <!-- frame_name>omit so it defaults to link name</frameName-->
-            <!-- <hack_baseline>0.07</hack_baseline> -->
-          </plugin>
-      </sensor>
-      <sensor name="forward_up_rgbd" type="camera">
-        <pose>0.56882 0.00787 0.93755 0 1.0123 0</pose>
-        <always_on>true</always_on>
-        <visualize>true</visualize>
-        <update_rate>30</update_rate>
-        <camera name="forward_up_rgb">
-          <horizontal_fov>1.085595</horizontal_fov>
-          <image>
-              <width>640</width>
-              <height>480</height>
-              <format>R8G8B8</format>
-          </image>
-          <clip>
-              <near>0.03</near>
-              <far>100</far>
-          </clip>
-          <noise>
-            <type>gaussian</type>
-            <!-- Noise is sampled independently per pixel on each frame.
-                  That pixel's noise value is added to each of its color
-                  channels, which at that point lie in the range [0,1]. -->
-            <mean>0.0</mean>
-            <stddev>0.007</stddev>
-          </noise>
-        </camera>
-          <plugin name="forward_up_rgbd_driver" filename="libgazebo_ros_camera.so">
-            <ros>
-              <!-- <namespace>test_cam</namespace> -->
-              <!-- <remapping>image_raw:=image_demo</remapping> -->
-              <!-- <remapping>camera_info:=camera_info_demo</remapping> -->
-            </ros>
-            <!-- camera_name>omit so it defaults to sensor name</camera_name-->
-            <!-- frame_name>omit so it defaults to link name</frameName-->
-            <!-- <hack_baseline>0.07</hack_baseline> -->
-          </plugin>
-      </sensor>
-      <sensor name="back_down_rgbd" type="camera">
-        <pose>-0.51473 -0.016 0.048721 0 -0.6544 -3.14159</pose>
-        <always_on>true</always_on>
-        <visualize>true</visualize>
-        <update_rate>30</update_rate>
-        <camera name="back_down_rgb">
-          <horizontal_fov>1.085595</horizontal_fov>
-          <image>
-              <width>640</width>
-              <height>480</height>
-              <format>R8G8B8</format>
-          </image>
-          <clip>
-              <near>0.03</near>
-              <far>100</far>
-          </clip>
-          <noise>
-            <type>gaussian</type>
-            <mean>0.0</mean>
-            <stddev>0.007</stddev>
-          </noise>
-        </camera>
-          <plugin name="back_down_rgbd_driver" filename="libgazebo_ros_camera.so">
-            <ros>
-              <!-- <namespace>test_cam</namespace> -->
-              <!-- <remapping>image_raw:=image_demo</remapping>
-              <remapping>camera_info:=camera_info_demo</remapping> -->
-            </ros>
-            <output_type>sensor_msgs/Image</output_type>
-            <frame_name>rgbd_back_down_link</frame_name>
-          </plugin>
-      </sensor>
-      <sensor name="back_up_rgbd" type="camera">
-        <pose>-0.57035 -0.00787 0.93755 -0 1.0123 3.14159</pose>
-        <always_on>true</always_on>
-        <visualize>true</visualize>
-        <update_rate>30</update_rate>
-        <camera name="back_up_rgb">
-          <horizontal_fov>1.085595</horizontal_fov>
-          <image>
-              <width>640</width>
-              <height>480</height>
-              <format>R8G8B8</format>
-          </image>
-          <clip>
-              <near>0.03</near>
-              <far>100</far>
-          </clip>
-          <noise>
-            <type>gaussian</type>
-            <!-- Noise is sampled independently per pixel on each frame.
-                  That pixel's noise value is added to each of its color
-                  channels, which at that point lie in the range [0,1]. -->
-            <mean>0.0</mean>
-            <stddev>0.007</stddev>
-          </noise>
-        </camera>
-          <plugin name="back_up_rgbd_driver" filename="libgazebo_ros_camera.so">
-            <ros>
-              <!-- <namespace>test_cam</namespace> -->
-              <!-- <remapping>image_raw:=image_demo</remapping> -->
-              <!-- <remapping>camera_info:=camera_info_demo</remapping> -->
-            </ros>
-            <!-- camera_name>omit so it defaults to sensor name</camera_name-->
-            <!-- frame_name>omit so it defaults to link name</frameName-->
-            <!-- <hack_baseline>0.07</hack_baseline> -->
-          </plugin>
-      </sensor>
       <sensor name="forward_lds" type="ray">
         <always_on>true</always_on>
         <visualize>true</visualize>
@@ -380,9 +248,11 @@
           <scan>
             <horizontal>
               <samples>360</samples>
-              <resolution>1.000000</resolution>
-              <min_angle>0.000000</min_angle>
-              <max_angle>6.280000</max_angle>
+              <resolution>0.200000</resolution>
+              <!-- <min_angle>0.000000</min_angle>
+              <max_angle>6.280000</max_angle> -->
+              <min_angle>-2.356000</min_angle>
+              <max_angle>2.356000</max_angle>
             </horizontal>
           </scan>
           <range>
@@ -414,9 +284,11 @@
           <scan>
             <horizontal>
               <samples>360</samples>
-              <resolution>1.000000</resolution>
-              <min_angle>0.000000</min_angle>
-              <max_angle>6.280000</max_angle>
+              <resolution>0.200000</resolution>
+              <!-- <min_angle>0.000000</min_angle>
+              <max_angle>6.280000</max_angle> -->
+              <min_angle>-2.356000</min_angle>
+              <max_angle>2.356000</max_angle>
             </horizontal>
           </scan>
           <range>
@@ -491,6 +363,123 @@
           </ros>
         </plugin>
       </sensor>
+
+      <sensor name="forward_down_rgbd" type="camera">
+        <pose>0.5132 0.016 0.048721 0 -0.6544 0</pose>
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <update_rate>30</update_rate>
+        <camera name="forward_down_rgbd">
+          <horizontal_fov>1.23918377</horizontal_fov>
+          <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+          </image>
+          <clip>
+              <near>0.03</near>
+              <far>100</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+          <plugin name="forward_down_rgbd_driver" filename="libgazebo_ros_camera.so">
+            <ros>
+            </ros>
+            <output_type>sensor_msgs/Image</output_type>
+            <frame_name>rgbd_forward_down_link</frame_name>
+          </plugin>
+      </sensor>
+      <sensor name="forward_up_rgbd" type="camera">
+        <pose>0.56882 0.00787 0.93755 0 1.0123 0</pose>
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <update_rate>30</update_rate>
+        <camera name="forward_up_rgb">
+          <horizontal_fov>1.23918377</horizontal_fov>
+          <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+          </image>
+          <clip>
+              <near>0.03</near>
+              <far>100</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+          <plugin name="forward_up_rgbd_driver" filename="libgazebo_ros_camera.so">
+            <ros>
+            </ros>
+            <output_type>sensor_msgs/Image</output_type>
+            <frame_name>rgbd_forward_up_link</frame_name>
+          </plugin>
+      </sensor>
+      <sensor name="back_down_rgbd" type="camera">
+        <pose>-0.51473 -0.016 0.048721 0 -0.6544 -3.14159</pose>
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <update_rate>30</update_rate>
+        <camera name="back_down_rgb">
+          <horizontal_fov>1.23918377</horizontal_fov>
+          <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+          </image>
+          <clip>
+              <near>0.03</near>
+              <far>100</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+          <plugin name="back_down_rgbd_driver" filename="libgazebo_ros_camera.so">
+            <ros>
+            </ros>
+            <output_type>sensor_msgs/Image</output_type>
+            <frame_name>rgbd_back_down_link</frame_name>
+          </plugin>
+      </sensor>
+      <sensor name="back_up_rgbd" type="camera">
+        <pose>-0.57035 -0.00787 0.93755 -0 1.0123 3.14159</pose>
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <update_rate>30</update_rate>
+        <camera name="back_up_rgb">
+          <horizontal_fov>1.23918377</horizontal_fov>
+          <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>R8G8B8</format>
+          </image>
+          <clip>
+              <near>0.03</near>
+              <far>100</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+          <plugin name="back_up_rgbd_driver" filename="libgazebo_ros_camera.so">
+            <ros>
+            </ros>
+            <output_type>sensor_msgs/Image</output_type>
+            <frame_name>rgbd_back_up_link</frame_name>
+          </plugin>
+      </sensor>
     </link>
 
 
@@ -501,10 +490,10 @@
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1e6</lower>
+          <upper>1e6</upper>
+          <effort>300</effort>
+          <velocity>1.5</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -531,7 +520,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_left_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_left_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -540,7 +529,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_left_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_left_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -554,10 +543,10 @@
       <axis>
         <xyz>0 -1 0</xyz>
         <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-          <effort>0</effort>
-          <velocity>0</velocity>
+          <lower>-1e6</lower>
+          <upper>1e6</upper>
+          <effort>300</effort>
+          <velocity>1.5</velocity>
         </limit>
         <dynamics>
           <spring_reference>0</spring_reference>
@@ -584,7 +573,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_right_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_right_link.dae</uri>
           </mesh>
         </geometry>
       </collision>
@@ -593,10 +582,47 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>/home/hz/hz/Work/Grabotics/B1-project/B1-Simulation/b1_simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_right_link.dae</uri>
+            <uri>/home/hz/hz/Work/Grabotics/b1_simulation/b1-simulation_v2/src/b1_simulation_v2/buddi_gazebo/meshes/wheel_right_link.dae</uri>
           </mesh>
         </geometry>
       </visual>
     </link>
+    
+    <plugin name="buddi_diff_drive" filename="/opt/ros/galactic/lib/libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/buddi</namespace>
+      </ros>
+
+      <update_rate>500</update_rate>
+
+      <left_joint>wheel_left_joint</left_joint>
+      <right_joint>wheel_right_joint</right_joint>
+
+      <wheel_separation>0.429</wheel_separation>
+      <wheel_diameter>0.066</wheel_diameter>
+
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+      <command_topic>cmd_vel</command_topic>
+
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+
+    <plugin name="buddi_joint_state" filename="/opt/ros/galactic/lib/libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <remapping>~/out:=joint_states</remapping>
+      </ros>
+      <update_rate>30</update_rate>
+      <joint_name>wheel_left_joint</joint_name>
+      <joint_name>wheel_right_joint</joint_name>
+    </plugin>
+
   </model>
 </sdf>
